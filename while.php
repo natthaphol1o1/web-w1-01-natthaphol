@@ -33,6 +33,7 @@
                   color: var(--ink);
             }
 
+            /* ── student bar ── */
             .student-bar {
                   width: 100%;
                   max-width: 460px;
@@ -52,6 +53,7 @@
             }
             .student-bar strong { color: var(--muted); font-weight: 500; }
 
+            /* ── card ── */
             .card {
                   width: 100%;
                   max-width: 460px;
@@ -62,6 +64,7 @@
                   padding: 2rem 1.75rem;
             }
 
+            /* ── header ── */
             .card-header {
                   display: flex;
                   align-items: flex-start;
@@ -87,6 +90,7 @@
                   margin-top: 3px;
             }
 
+            /* ── segmented nav ── */
             .nav {
                   display: flex;
                   background: var(--bg);
@@ -112,6 +116,7 @@
             }
             .nav a:not(.active):hover { color: var(--muted); }
 
+            /* ── form ── */
             .form-label {
                   display: block;
                   font-size: 0.78rem;
@@ -157,12 +162,14 @@
             input[type="submit"]:hover  { opacity: 0.82; }
             input[type="submit"]:active { transform: scale(0.97); }
 
+            /* ── divider ── */
             .divider {
                   border: none;
                   border-top: 1px solid var(--border);
                   margin: 0 0 1.5rem;
             }
 
+            /* ── result section ── */
             .result-label {
                   font-size: 0.76rem;
                   font-weight: 500;
@@ -180,6 +187,7 @@
                   margin-left: 6px;
             }
 
+            /* ── result rows ── */
             .result-row {
                   display: grid;
                   grid-template-columns: 76px 1fr 52px;
@@ -232,12 +240,12 @@
 
       <div class="card-header">
             <h1 class="card-title">แม่สูตรคูณ</h1>
-            <span class="loop-badge">while loop</span>
+            <span class="loop-badge">for loop</span>
       </div>
 
       <nav class="nav">
-            <a href="index.php">For Loop</a>
-            <a href="while.php" class="active">While Loop</a>
+            <a href="index.php" class="active">For Loop</a>
+            <a href="while.php">While Loop</a>
       </nav>
 
       <label class="form-label" for="num">เลขแม่สูตรคูณ</label>
@@ -254,8 +262,7 @@
             echo "<hr class='divider'>";
             echo "<p class='result-label'>สูตรคูณแม่<strong>{$num}</strong></p>";
 
-            $i = 1;
-            while($i <= 12){
+            for($i = 1; $i <= 12; $i++){
                   $result = $num * $i;
                   $pct    = round(($i / 12) * 100);
                   echo "
@@ -266,7 +273,6 @@
                         </div>
                         <span class='result-num'>{$result}</span>
                   </div>";
-                  $i++;
             }
       }
       ?>
